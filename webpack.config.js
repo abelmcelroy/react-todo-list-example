@@ -26,7 +26,7 @@ module.exports = (_, argv) => {
     plugins: [
       new webpack.DefinePlugin({
         API_URL: argv.mode === "production" ?
-          JSON.stringify(process.env.API_URL) :
+          JSON.stringify("YOUR_VERCEL_SERVER_APP_DOMAIN") :
           JSON.stringify("http://localhost:3001"),
       })
     ]
